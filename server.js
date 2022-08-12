@@ -4,9 +4,9 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const userApi = require("./controllers/user_controller");
-const loginApi = require("./controllers/login_controller");
-const noteApi = require("./controllers/note_controller");
+const userApi = require("./controllers/user.controller");
+const loginApi = require("./controllers/login.controller");
+const noteApi = require("./controllers/note.controller");
 
 dotenv.config();
 const app = express();
