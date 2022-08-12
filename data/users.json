@@ -1,0 +1,12 @@
+[
+  {
+    "firstName": "Lakma",
+    "lastName": "Sanjula",
+    "email": "lakmagamage97@gmail.com",
+    "dateOfBirth": "1997/12/10",
+    "mobile": 774115434,
+    "status": true,
+    "password": "123",
+    "accountType": "Admin"
+  }
+]
