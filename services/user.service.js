@@ -1,7 +1,7 @@
 const User = require("../models/user.model");
 const nodemailer = require("nodemailer");
 
-//creating user
+//create user
 const createUser = async (req, res) => {
   if (req.body) {
     const user = new User(req.body);
@@ -23,6 +23,7 @@ const createUser = async (req, res) => {
   }
 };
 
+//email
 const sendMail = async (to, subject, message) => {
   var transporter = nodemailer.createTransport({
     service: "gmail",
@@ -50,7 +51,7 @@ const sendMail = async (to, subject, message) => {
   });
 };
 
-//updating the user table with the user type for the specific userId
+//updating the user 
 const updateUser = async (req, res) => {
   await User.findByIdAndUpdate(
     req.params.id,
@@ -79,7 +80,6 @@ const searchUser = async (req, res) => {
     $or: [
       { firstName: req.params.value },
       { email: req.params.value },
-      // { _id: req.params.value },
     ],
   };
   await User.find(query)
