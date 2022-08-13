@@ -20,7 +20,7 @@ const createNote = async (req, res) => {
 const deleteNote = async (req, res) => {
   const id = req.params.id;
 
-  //delete product data from database
+  //delete product 
   await Note.findByIdAndDelete(id)
     .then((response) => {
       console.log("Data sucessfully deleted from the mongo db!");
